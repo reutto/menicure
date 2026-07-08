@@ -1,7 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { navLinks, socialLinks } from "@/data/content";
+import { navLinks, siteName, socialLinks } from "@/data/content";
+
+const socialIcons: Record<string, React.ReactNode> = {
+  Facebook: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+      <path d="M13.5 21v-7.5h2.5l.5-3H13.5V8.5c0-.86.24-1.5 1.53-1.5H16.5V4.35C16.24 4.31 15.34 4.25 14.28 4.25c-2.2 0-3.78 1.34-3.78 3.8V10.5H8v3h2.5V21h3Z" />
+    </svg>
+  ),
+  Instagram: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-5 w-5" aria-hidden="true">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17" cy="7" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+};
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -10,7 +25,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border-soft bg-surface/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a href="#top" className="font-serif text-xl font-semibold tracking-wide text-accent-dark sm:text-2xl">
-          finger<span className="text-accent">SPA</span>
+          {siteName.first}{" "}
+          <span className="text-accent">{siteName.second}</span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -40,7 +56,7 @@ export default function Header() {
                 className="transition-colors hover:text-accent-dark"
               >
                 <span className="sr-only">{s.label}</span>
-                <span className="inline-block h-2 w-2 rounded-full bg-current" />
+                {socialIcons[s.label]}
               </a>
             ))}
           </div>

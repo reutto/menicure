@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const STORAGE_KEY = "fingerspa-cookie-consent";
+const STORAGE_KEY = "beauty-nails-cookie-consent";
 
 const categories = [
   { key: "essential", label: "Niezbędne", locked: true },

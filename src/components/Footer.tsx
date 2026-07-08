@@ -1,4 +1,4 @@
-import { locations, navLinks, socialLinks } from "@/data/content";
+import { locations, navLinks, siteName, socialLinks } from "@/data/content";
 import Reveal from "./Reveal";
 
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
         <Reveal className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-serif text-xl font-semibold text-white">
-              finger<span className="text-accent">SPA</span>
+              {siteName.first} <span className="text-accent">{siteName.second}</span>
             </p>
             <p className="mt-3 text-sm">
               Salon manicure i pedicure w Warszawie — Powiśle i Port Praski.
@@ -57,9 +57,10 @@ export default function Footer() {
           ))}
         </Reveal>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row">
-          <p>© 2026 fingerspa – Wszystkie Prawa Zastrzeżone.</p>
-          <p>Zaprojektowane i stworzone przez Codevant.</p>
+        <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs">
+          <p>
+            © 2026 {siteName.first} {siteName.second} – Wszystkie Prawa Zastrzeżone.
+          </p>
         </div>
       </div>
     </footer>

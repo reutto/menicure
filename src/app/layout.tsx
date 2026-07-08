@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "fingerSPA — Salon manicure i pedicure w Warszawie",
+  title: "Beauty Nails — Salon manicure i pedicure w Warszawie",
   description:
     "Profesjonalny salon manicure i pedicure w Warszawie. Dwie lokalizacje: Powiśle i Port Praski. Manicure hybrydowy, pedicure, przedłużanie paznokci, laminacja brwi.",
 };

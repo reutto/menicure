@@ -1,3 +1,5 @@
+export const siteName = { first: "Beauty", second: "Nails" };
+
 export const navLinks = [
   { label: "Zespół", href: "#zespol" },
   { label: "Cennik", href: "#uslugi" },
